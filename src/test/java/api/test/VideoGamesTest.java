@@ -21,7 +21,7 @@ public class VideoGamesTest {
 	public void setupData() {
 		faker = new Faker();
 		videoGamePayload = new  VideoGame();
-		videoGamePayload.setId(1);		
+//			
 	}
 	
 	
@@ -30,6 +30,11 @@ public class VideoGamesTest {
 	
 	@Test(priority=1)
 	public void testPostCreateVideoGame () {
+		videoGamePayload.setCategory("Platform");
+		videoGamePayload.setName("Mario");
+		videoGamePayload.setRating("Mature");
+		videoGamePayload.setReleaseDate("2012-05-04");
+		videoGamePayload.setReviewScore(85);
 		Response response = VideoGameEndpoints.createVideoGame(videoGamePayload);
 		response.then().log().body();		
 		Assert.assertEquals(response.getStatusCode(),403);
@@ -53,6 +58,7 @@ public class VideoGamesTest {
 		Response response = VideoGameEndpoints.getVideoGameById(this.videoGamePayload.getId());
 		response.then().log().all();		
 		Assert.assertEquals(response.getStatusCode(),200);
+		
 			}
 	
 //// Test case to get video game with an invalid id

@@ -15,8 +15,7 @@ public class VideoGameEndpoints {
 		Response response = given()
 		   .contentType(ContentType.JSON)
 		   .accept(ContentType.JSON)
-		   .body(payload)
-		
+		   .body(payload)		
 		.when()
 			.post(ConfigManager.getUrl("games.controller.endpoint"));
 		
