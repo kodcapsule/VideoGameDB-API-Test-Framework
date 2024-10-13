@@ -4,19 +4,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigManager {
-	
-	
+public class ConfigManager {	
+// function to load  config.properties file	
 	 private static Properties properties = new Properties();
 
 	    static {
 	        try {
 	            FileInputStream configStream = new FileInputStream("src/test/resources/config.properties");
-	            properties.load(configStream);
-	           String url = properties.getProperty("base.url");
-	           String urlend = properties.getProperty("auth.controller.endpoint");
-	           System.out.println("URL: " + url);
-	           System.out.println("URL: " + urlend);
+	            properties.load(configStream);       
+	           
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }

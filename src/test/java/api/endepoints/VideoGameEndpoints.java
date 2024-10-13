@@ -36,13 +36,36 @@ public class VideoGameEndpoints {
 	
 	
 	
-//	Endpoint to get a specific video by id
+//	Endpoint to get a specific video game  by id
 	public static Response  getVideoGameById(int id) {
 		Response response = given()		
-							.pathParam("id", Integer.toString(id))
-//							.queryParam(Integer.toString(id), Integer.toString(id))
+							.pathParam("id", Integer.toString(id))						
 				.when()
 				.get(ConfigManager.getUrl("games2.controller.endpoint"));
+		
+		return response;
+	}
+	
+	
+//	Endpoint to delete a specific video game  by id
+	public static Response  deleteVideoGameById(int id) {
+		Response response = given()		
+							.pathParam("id", Integer.toString(id))						
+				.when()
+				.delete(ConfigManager.getUrl("games2.controller.endpoint"));
+		
+		return response;
+	}
+	
+	//	Endpoint to update a specific video game  by id
+	public static Response  updateVideoGame(int id, VideoGame videoGame) {
+		Response response = given()		
+						.contentType(ContentType.JSON)
+						.accept(ContentType.JSON)
+						.pathParam("id", Integer.toString(id))
+						.body(videoGame)												
+				.when()
+				  .put(ConfigManager.getUrl("games2.controller.endpoint"));
 		
 		return response;
 	}
