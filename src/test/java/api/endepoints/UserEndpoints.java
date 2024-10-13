@@ -14,7 +14,7 @@ public class UserEndpoints {
 		   .body(payload)
 		
 		.when()
-			.post(ConfigManager.getUrl("auth.endpoint"));		
+			.post(ConfigManager.getUrl("auth.controller.endpoint"));		
 		return response;
 	}
 

@@ -14,7 +14,7 @@ public class ConfigManager {
 	            FileInputStream configStream = new FileInputStream("src/test/resources/config.properties");
 	            properties.load(configStream);
 	           String url = properties.getProperty("base.url");
-	           String urlend = properties.getProperty("auth.endpoint");
+	           String urlend = properties.getProperty("auth.controller.endpoint");
 	           System.out.println("URL: " + url);
 	           System.out.println("URL: " + urlend);
 	        } catch (IOException e) {
