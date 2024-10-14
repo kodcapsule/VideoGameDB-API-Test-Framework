@@ -6,8 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.github.javafaker.Faker;
 
+import com.github.javafaker.Faker;
 import api.endepoints.VideoGameEndpoints;
 import api.payload.VideoGame;
 import io.restassured.response.Response;
@@ -17,12 +17,15 @@ public class VideoGamesTest {
 	Faker faker;
 	VideoGame videoGamePayload; 
 	
+	
+	
 	@BeforeClass
 	public void setupData() {
 		faker = new Faker();
-		videoGamePayload = new  VideoGame();
-//			
+		videoGamePayload = new  VideoGame();			
 	}
+	
+	
 	
 	
 	
@@ -44,7 +47,7 @@ public class VideoGamesTest {
 	
 //	Test case for  get video games
 	@Test(priority=2)
-	public void testGetVideoGames () {
+	public void testGetVideoGames () {		
 		Response response = VideoGameEndpoints.getVideoGames();
 		response.then().log().body();		
 		Assert.assertEquals(response.getStatusCode(),200);
