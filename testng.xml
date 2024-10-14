@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="VideoGameSuite">
+
+<listeners>
+        <listener class-name="api.utilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="VideoGameTest">
+	   <classes>
+	            <class name="api.test.UserAuthTest"/>
+	            <class name="api.test.VideoGamesTest"/>
+	            <class name="api.test.VideoGamesTestV2"/>
+	    </classes>
+  </test> <!-- VideoGameTest -->
+</suite> <!-- VideoGameSuite -->
