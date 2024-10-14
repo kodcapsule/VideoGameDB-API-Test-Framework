@@ -123,19 +123,7 @@ test-output/ExtentReport.html
 
 ---
 
-## 6. Continuous Integration (Optional)
-
-If you want to integrate this framework into a **CI/CD pipeline** using tools like **GitHub Actions**, **Jenkins**, or **GitLab CI**, follow these steps:
-
-1. **Set up CI Pipeline**:  
-   Create a CI pipeline configuration (e.g., `.yml` file for GitHub Actions or GitLab CI) that runs the `mvn test` command on each commit or pull request.
-
-2. **Artifacts and Reports**:  
-   Configure the CI tool to save the `test-output/ExtentReport.html` as an artifact, which can be viewed after the test execution is complete.
-
----
-
-## 7. Extending the Framework
+## 6. Extending the Framework
 
 This framework can be easily extended to include more API endpoints and more detailed test cases. Here are some ideas for extension:
 
@@ -146,15 +134,7 @@ This framework can be easily extended to include more API endpoints and more det
 
 ---
 
-## 8. Conclusion
-
-This API automation framework provides a flexible and scalable way to automate testing of REST APIs using Java, TestNG, RestAssured, and ExtentReports. By following the steps above, you should be able to set up, run tests, and generate detailed reports effortlessly.
-
-If you encounter any issues or have additional questions, feel free to refer to the project's README or reach out for support.
-
----
-
-## 9. Helpful Commands
+## 7. Helpful Commands
 
 Here’s a summary of key commands you might use:
 
