@@ -30,8 +30,8 @@ public class ExtentReportManager implements ITestListener {
 		 sparkReporter =  new ExtentSparkReporter(".\\reports\\"+reportName);
 		 
 		 sparkReporter.config().setTheme(Theme.DARK);
-		 sparkReporter.config().setDocumentTitle("Video Game DB Authomation report");
-		 sparkReporter.config().setReportName("Video Game DB Authomation");
+		 sparkReporter.config().setDocumentTitle("DB API AUTOMATION");
+		 sparkReporter.config().setReportName("Video Game DB API AUTOMATION");
 		 
 		 
 		 extent = new ExtentReports();
